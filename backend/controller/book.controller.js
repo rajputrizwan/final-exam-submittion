@@ -14,7 +14,7 @@ export const getBooks = async (req, res) => {
 export const createBook = async (req, res) => {
   const book = req.body;
 
-  if (!book.name || !book.price || !book.image) {
+  if (!book.name || !book.author) {
     return res
       .status(400)
       .json({ success: false, message: "Please provide all fields" });
